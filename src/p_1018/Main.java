@@ -12,15 +12,15 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int valor;
+        Long valor;
 
         int[] cedulas = {100, 50, 20, 10, 5, 2, 1};
 
-        valor = sc.nextInt();
+        valor = sc.nextLong();
 
         System.out.printf("%d\n", valor);
         for(int i=0; i < cedulas.length; i++){
-            int auxDiv = valor / cedulas[i];
+            int auxDiv = (int) (valor / cedulas[i]);
             System.out.printf("%d nota(s) de R$ %d,00\n", auxDiv, cedulas[i]);
             valor = valor % cedulas[i];
         }
